@@ -68,7 +68,7 @@ public class MortgageAffordabilityCalculator {
 		
 		js.executeScript("arguments[0].scrollIntoView(true);", calculateButton);
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
