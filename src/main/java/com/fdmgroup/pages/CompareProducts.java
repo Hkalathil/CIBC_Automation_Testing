@@ -69,6 +69,12 @@ public class CompareProducts {
 		if(string1.equals("CIBC Personal Loan") && string2.equals("CIBC Personal Car Loan") && string3.equals("CIBC RRSP Maximizer Loan™")) {
 			personalLoan.click();
 			personalCarLoan.click();
+			js.executeScript("arguments[0].scrollIntoView(true);", rRSPLoan);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			rRSPLoan.click();
 			if(personalLoan.isSelected() && personalCarLoan.isSelected() && rRSPLoan.isSelected()) {
 				return true;
@@ -78,7 +84,14 @@ public class CompareProducts {
 			}
 		}
 		else if(string1.equals("CIBC Personal Line of Credit") && string2.equals("CIBC Home Power® Plan Line of Credit") && string3.equals("(none)")) {
-			js.executeScript("arguments[0].scrollIntoView(true);", compareProductsButton2);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.elementToBeClickable(compareProductsButton1));
+			js.executeScript("arguments[0].scrollIntoView(true);", compareProductsButton1);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			personalLineOfCredit.click();
 			homePower.click();
 			if(personalLineOfCredit.isSelected() && homePower.isSelected()) {
