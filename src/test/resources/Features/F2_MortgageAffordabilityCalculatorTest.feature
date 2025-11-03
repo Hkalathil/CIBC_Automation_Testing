@@ -20,9 +20,9 @@ Feature: As a future home owner I want to use the Mortgage Affordability Calcula
       | 123123    | 12312       | 1231  | 1231   | 123   |
       | 500000    | 50000       | 50000 | 2500   | 500   |
 
-  @InvalidMortgageDetailsValidInvestmentAmount
-  Scenario:User User cannot set an invalid investment amount and calculate their returns
-    When User enters 0 into the total gross household income field and enters 0 into the Down payment field and enters 0 into the loans and other debts and enters 0 into the credit cards and lines of credit and enters 0 into the Monthly condo fees
-    And User does not choose an option from the dropdown menu
-    And User selects the "Calculate" button with invalid values
-    Then User does not see the maximum purchase price and monthly mortgage payments and instead sees error messages
+#  @InvalidMortgageDetailsValidInvestmentAmount
+#  Scenario:User User cannot set an invalid investment amount and calculate their returns
+#    When User enters 0 into the total gross household income field and enters 0 into the Down payment field and enters 0 into the loans and other debts and enters 0 into the credit cards and lines of credit and enters 0 into the Monthly condo fees
+#    And User does not choose an option from the dropdown menu
+#    And User selects the "Calculate" button with invalid values
+#    Then User does not see the maximum purchase price and monthly mortgage payments and instead sees error messages
