@@ -65,7 +65,13 @@ public class MortgageAffordabilityCalculator {
 	private WebElement provinceError;
 	
 	public boolean enterGrossAnualIncome(int int1) {
+		
 		js.executeScript("arguments[0].scrollIntoView(true);", calculateButton);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		String value = String.valueOf(int1);
 		grossAnualIncome.sendKeys(value);
 		String actualValue = grossAnualIncome.getAttribute("data-last");
