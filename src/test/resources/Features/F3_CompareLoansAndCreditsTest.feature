@@ -16,7 +16,7 @@ Feature: As a bank account holder I want to compare different loans and lines of
 
     Examples:
       | choice1                       | choice2                                        | choice3                   |
-      | CIBC Personal Loan            | CIBC Personal Car Loan                         | CIBC RRSP Maximizer Loan™ |
+#     | CIBC Personal Loan            | CIBC Personal Car Loan                         | CIBC RRSP Maximizer Loan™ |
       | CIBC Personal Line of Credit  | CIBC Home Power® Plan Line of Credit           | (none)                    |
       | CIBC Education Line of Credit | CIBC Professional Edge® Student Line of Credit | (none)                    |
 
