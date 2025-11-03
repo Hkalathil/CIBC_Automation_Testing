@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="117.879" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-10-24T21:08:38.693498600Z">
+<testcase classname="As a CIBC account holder I want to use the GIC Calculator to accurately estimate my returns on my RRSP investment" name="User can only choose a one year term length if they choose the option to access money prior to maturity" time="10.52">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Investments tab....................................passed
+And User clicks the Investment Calculators option...........................passed
+And User clicks the GIC calculator option...................................passed
+When User selects "Save for retirement (RRSP)" from the dropdown menu.......passed
+Then The variable interest rate option should be disabled...................passed
+When User selects the option to access money prior to maturity..............passed
+Then The only option for term length is 1 year..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="As a CIBC account holder I want to use the GIC Calculator to accurately estimate my returns on my RRSP investment" name="User can set a valid investment amount and calculate their returns - #1.1" time="11.865">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Investments tab....................................passed
+And User clicks the Investment Calculators option...........................passed
+And User clicks the GIC calculator option...................................passed
+When User selects "Save for retirement (RRSP)" from the dropdown menu.......passed
+Then The variable interest rate option should be disabled...................passed
+When User enters a valid investment amount 1000.............................passed
+And User clicks the "Calculate my returns" button after entering valid amount.passed
+Then User can see the estimated returns when the investment matures.........passed
+]]></system-out>
+</testcase>
+<testcase classname="As a CIBC account holder I want to use the GIC Calculator to accurately estimate my returns on my RRSP investment" name="User can set a valid investment amount and calculate their returns - #1.2" time="10.98">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Investments tab....................................passed
+And User clicks the Investment Calculators option...........................passed
+And User clicks the GIC calculator option...................................passed
+When User selects "Save for retirement (RRSP)" from the dropdown menu.......passed
+Then The variable interest rate option should be disabled...................passed
+When User enters a valid investment amount 500000...........................passed
+And User clicks the "Calculate my returns" button after entering valid amount.passed
+Then User can see the estimated returns when the investment matures.........passed
+]]></system-out>
+</testcase>
+<testcase classname="As a CIBC account holder I want to use the GIC Calculator to accurately estimate my returns on my RRSP investment" name="User should recieve an error message when entering an invalid invesment amount - #1.1" time="10.511">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Investments tab....................................passed
+And User clicks the Investment Calculators option...........................passed
+And User clicks the GIC calculator option...................................passed
+When User selects "Save for retirement (RRSP)" from the dropdown menu.......passed
+Then The variable interest rate option should be disabled...................passed
+When User enters an invalid investment amount 0.............................passed
+And User clicks the "Calculate my returns" button after entering invalid amount.passed
+Then An error message is displayed prompting the user to enter a valid amount.passed
+]]></system-out>
+</testcase>
+<testcase classname="As a CIBC account holder I want to use the GIC Calculator to accurately estimate my returns on my RRSP investment" name="User should recieve an error message when entering an invalid invesment amount - #1.2" time="10.02">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Investments tab....................................passed
+And User clicks the Investment Calculators option...........................passed
+And User clicks the GIC calculator option...................................passed
+When User selects "Save for retirement (RRSP)" from the dropdown menu.......passed
+Then The variable interest rate option should be disabled...................passed
+When User enters an invalid investment amount 250...........................passed
+And User clicks the "Calculate my returns" button after entering invalid amount.passed
+Then An error message is displayed prompting the user to enter a valid amount.passed
+]]></system-out>
+</testcase>
+<testcase classname="As a future home owner I want to use the Mortgage Affordability Calculator to determine my maximum purchase price and monthly mortage payment" name="User enters valid values into the appropriate fields and recieves a maximum purchase price and monthly mortgage payment - #1.1" time="8.931">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Mortgages tab......................................passed
+And User clicks the Mortgage Affordability Calculator option................passed
+When User enters 123123 into the total gross household income field and enters 12312 into the Down payment field and enters 1231 into the loans and other debts and enters 1231 into the credit cards and lines of credit and enters 123 into the Monthly condo fees.passed
+And User chooses "Ontario" from the dropdown menu and ensure there are 14 options.passed
+And User selects the "Calculate" button with valid values...................passed
+Then User sees the maximum purchase price and the monthly mortgage payment..passed
+]]></system-out>
+</testcase>
+<testcase classname="As a future home owner I want to use the Mortgage Affordability Calculator to determine my maximum purchase price and monthly mortage payment" name="User enters valid values into the appropriate fields and recieves a maximum purchase price and monthly mortgage payment - #1.2" time="8.592">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Mortgages tab......................................passed
+And User clicks the Mortgage Affordability Calculator option................passed
+When User enters 500000 into the total gross household income field and enters 50000 into the Down payment field and enters 50000 into the loans and other debts and enters 2500 into the credit cards and lines of credit and enters 500 into the Monthly condo fees.passed
+And User chooses "Ontario" from the dropdown menu and ensure there are 14 options.passed
+And User selects the "Calculate" button with valid values...................passed
+Then User sees the maximum purchase price and the monthly mortgage payment..passed
+]]></system-out>
+</testcase>
+<testcase classname="As a future home owner I want to use the Mortgage Affordability Calculator to determine my maximum purchase price and monthly mortage payment" name="User User cannot set an invalid investment amount and calculate their returns" time="8.906">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Mortgages tab......................................passed
+And User clicks the Mortgage Affordability Calculator option................passed
+When User enters 0 into the total gross household income field and enters 0 into the Down payment field and enters 0 into the loans and other debts and enters 0 into the credit cards and lines of credit and enters 0 into the Monthly condo fees.passed
+And User does not choose an option from the dropdown menu...................passed
+And User selects the "Calculate" button with invalid values.................passed
+Then User does not see the maximum purchase price and monthly mortgage payments and instead sees error messages.passed
+]]></system-out>
+</testcase>
+<testcase classname="As a bank account holder I want to compare different loans and lines of credit to determine what option is most suitable for my needs" name="User selects valid combinations of loan and line of credit options to compare features - #1.1" time="9.205">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Lending tab........................................passed
+And User clicks the Compare Products option.................................passed
+When User selects the following options "CIBC Personal Loan" and "CIBC Personal Car Loan" and "CIBC RRSP Maximizer Loan™" and the corresponding checkboxes are ticked.passed
+And User clicks the Compare Products button.................................passed
+Then The user sees the comparison table showing the selected options........passed
+]]></system-out>
+</testcase>
+<testcase classname="As a bank account holder I want to compare different loans and lines of credit to determine what option is most suitable for my needs" name="User selects valid combinations of loan and line of credit options to compare features - #1.2" time="8.083">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Lending tab........................................passed
+And User clicks the Compare Products option.................................passed
+When User selects the following options "CIBC Personal Line of Credit" and "CIBC Home Power® Plan Line of Credit" and "(none)" and the corresponding checkboxes are ticked.passed
+And User clicks the Compare Products button.................................passed
+Then The user sees the comparison table showing the selected options........passed
+]]></system-out>
+</testcase>
+<testcase classname="As a bank account holder I want to compare different loans and lines of credit to determine what option is most suitable for my needs" name="User selects valid combinations of loan and line of credit options to compare features - #1.3" time="10.544">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Lending tab........................................passed
+And User clicks the Compare Products option.................................passed
+When User selects the following options "CIBC Education Line of Credit" and "CIBC Professional Edge® Student Line of Credit" and "(none)" and the corresponding checkboxes are ticked.passed
+And User clicks the Compare Products button.................................passed
+Then The user sees the comparison table showing the selected options........passed
+]]></system-out>
+</testcase>
+<testcase classname="As a bank account holder I want to compare different loans and lines of credit to determine what option is most suitable for my needs" name="User cannot use the compare feature if no or only one option is chosen" time="9.544">
+<system-out><![CDATA[
+Given User launches the CIBC homepage and user accepts all cookies..........passed
+And User hovers over the Lending tab........................................passed
+And User clicks the Compare Products option.................................passed
+When User does not choose any options.......................................passed
+And User tries to click the Compare Products button.........................passed
+Then The button should be disabled and the user will not be redirected to the comparing products page.passed
+]]></system-out>
+</testcase>
+</testsuite>
