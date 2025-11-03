@@ -11,10 +11,12 @@ import org.openqa.selenium.support.ui.Select;
 public class MortgageAffordabilityCalculator {
 	private WebDriver driver;
 	private Actions actions;
+	private JavascriptExecutor js;
 
 	public MortgageAffordabilityCalculator(WebDriver driver) {
 		this.driver = driver;
 		this.actions = new Actions(driver);
+		this.js = (JavascriptExecutor) driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -62,6 +64,7 @@ public class MortgageAffordabilityCalculator {
 	private WebElement provinceError;
 	
 	public boolean enterGrossAnualIncome(int int1) {
+		js.executeScript("arguments[0].scrollIntoView(true);", calculateButton);
 		String value = String.valueOf(int1);
 		grossAnualIncome.sendKeys(value);
 		String actualValue = grossAnualIncome.getAttribute("data-last");
