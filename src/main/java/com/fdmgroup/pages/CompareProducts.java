@@ -69,9 +69,9 @@ public class CompareProducts {
 		if(string1.equals("CIBC Personal Loan") && string2.equals("CIBC Personal Car Loan") && string3.equals("CIBC RRSP Maximizer Loan™")) {
 			personalLoan.click();
 			personalCarLoan.click();
-			js.executeScript("arguments[0].scrollIntoView(true);", rRSPLoan);
+			js.executeScript("arguments[0].scrollIntoView(true);", personalCarLoan);
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
