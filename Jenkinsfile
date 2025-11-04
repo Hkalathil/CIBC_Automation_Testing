@@ -32,9 +32,8 @@ pipeline {
                          jsonReportDirectory: 'Report',
                          sortingMethod: 'ALPHABETICAL',
                          trendsLimit: 10,
-                         undefinedFails: true,
-                         ignoreFailedTests: false,
-                         failedFeaturesNumber: 0
+                         failedFeaturesNumber: 0,
+                         undefinedStepsNumber: 0
             }
         }
         
