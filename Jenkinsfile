@@ -26,13 +26,13 @@ pipeline {
 
         stage('Generate Report') {
             steps {
-                echo 'Publishing Maven Cucumber HTML Report...'
+                echo 'Publishing Cucumber HTML Report...'
                 publishHTML (target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'target/cucumber-html-reports',
-                    reportFiles: 'overview-features.html',
+                    reportDir: "${REPORT_DIR}",
+                    reportFiles: 'cucumber-html-reports/overview-features.html',
                     reportName: 'Cucumber Test Report'
                 ])
             }
