@@ -23,7 +23,21 @@ pipeline {
                 bat 'mvn clean test' // use 'sh' instead of 'bat' on Linux/Mac
             }
         }
-
+        
+        stage('Generate Cucumber Report') {
+            steps {
+                echo 'Generating Cucumber report...'
+                cucumber buildStatus: 'UNSTABLE',
+                         fileIncludePattern: '**/cucumber.json',
+                         jsonReportDirectory: 'Report',
+                         sortingMethod: 'ALPHABETICAL',
+                         trendsLimit: 10,
+                         undefinedFails: true,
+                         ignoreFailedTests: false,
+                         failedFeaturesNumber: 0
+            }
+        }
+        
         stage('Generate Report') {
             steps {
                 echo 'Publishing Cucumber HTML Report...'
