@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3.9.11'    // <-- must match name unde
+        maven 'Maven3.9.11'
         jdk 'JDK_21'           
     }
 
