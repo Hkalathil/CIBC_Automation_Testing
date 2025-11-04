@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven3.9.11'    // <-- must match name unde
-        jdk 'JDK_21'           // <-- optional if you configu
+        jdk 'JDK_21'           // <-- optional if you 
     }
 
     environment {
