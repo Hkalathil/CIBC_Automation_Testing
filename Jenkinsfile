@@ -20,7 +20,7 @@ pipeline {
         stage('Build and Test') {
             steps {
                 echo 'Building the project...'
-                bat 'mvn clean test' // use 'sh' instead of 'bat' 
+                bat 'mvn clean test'
             }
         }
         
